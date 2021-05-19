@@ -36,7 +36,7 @@ def slots():
     
     URL = f"https://api.telegram.org/bot{config.token}/sendMessage?chat_id=@cowinbbmpslots&text={final_text}"
     get_url(URL)
-    webhook = DiscordWebhook(url='https://discord.com/api/webhooks/844520658242109475/wwoStY69vUGMoJi1yOr4wirvVR0hDr6Mzqb0Y_BPo31NZPSKlxTQ_kuPPxJ5rVbChz25', content=final_text)
+    webhook = DiscordWebhook(url='config.disweb', content=final_text)
     response = webhook.execute()
 
 schedule.every(2).minutes.do(slots)
