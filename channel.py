@@ -39,8 +39,8 @@ def slots():
     webhook = DiscordWebhook(url='https://discord.com/api/webhooks/844520658242109475/wwoStY69vUGMoJi1yOr4wirvVR0hDr6Mzqb0Y_BPo31NZPSKlxTQ_kuPPxJ5rVbChz25', content=final_text)
     response = webhook.execute()
 
-# schedule.every(2).minutes.do(slots)
-schedule.every(10).seconds.do(slots)
+schedule.every(2).minutes.do(slots)
+# schedule.every(10).seconds.do(slots)
 
 while True:
     schedule.run_pending()
